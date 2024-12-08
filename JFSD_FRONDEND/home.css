@@ -1,0 +1,26 @@
+.center-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Adjust height for positioning */
+  }
+
+  .content-box {
+    background-color: rgba(249, 246, 246, 0.989); /* Light dull color with slight transparency */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgb(0, 0, 0);
+    max-width: 600px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+
+  .content-box h1 {
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  .content-box p {
+    color: #555;
+    line-height: 1.5;
+  }

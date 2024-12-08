@@ -1,0 +1,95 @@
+
+.profile-card {
+    position: absolute;
+    top: 70px;
+    left: 20%;
+    display: flex;
+    width: 800px;
+    height: 400px;
+    background: linear-gradient(135deg, #f6f8fd, #ffffff);
+    border-radius: 16px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  .profile-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+  }
+  
+  .left-section {
+    width: 40%;
+    background: linear-gradient(135deg, #333, #333);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #f5f5dc;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-photo:hover {
+    transform: scale(1.1);
+  }
+  
+  .right-section {
+    width: 60%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #333;
+    justify-content: space-between;
+    color: #333;
+    background-color: white;
+  }
+  
+  .student-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .student-detail {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 0.4rem 0;
+  }
+  
+  .button-group {
+    display: flex;
+    margin-top: 1rem;
+  }
+  
+  .action-btn {
+    background-color: #333;
+    color: #f5f5dc;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .action-btn:hover {
+    background-color: #f5f5dc;
+    color: #333;
+    border: 1px solid #333;
+    transform: scale(1.1);
+  }
+  
+  .action-btn:active {
+    transform: scale(1.05);
+  }

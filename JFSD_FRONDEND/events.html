@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events Page</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="events.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">MSECA</div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="main.html">Logout</a></li>
+    </ul>
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+
+  <!-- Content Section -->
+  <div class="buttons-container" id="contentContainer">
+    <!-- Buttons -->
+    <div id="buttonsGroup">
+      <button class="event-button" onclick="showUpcomingEvents()">My Events</button>
+      <button class="event-button" onclick="showRegistrationForm()">Events Registrations</button>
+    </div>
+
+    <!-- Registration Form -->
+    <div class="registration-form" id="registrationForm">
+      <h3>Event Registration</h3>
+      <div class="form-group">
+        <label for="id">ID:</label>
+        <input type="text" id="id" placeholder="Enter your ID">
+      </div>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+      </div>
+      <div class="form-group">
+        <label for="event">Event Name:</label>
+        <select id="event">
+          <option value="" disabled selected>Select an event</option>
+          <option value="hackathon">Hackathon 2024</option>
+          <option value="seminar">AI Seminar</option>
+          <option value="workshop">Tech Workshop</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <button onclick="register()">Register</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+
+    function showRegistrationForm() {
+      const buttonsGroup = document.getElementById('buttonsGroup');
+      const registrationForm = document.getElementById('registrationForm');
+      
+      // Hide buttons and show form
+      buttonsGroup.style.display = 'none';
+      registrationForm.style.display = 'flex';
+    }
+
+    function showUpcomingEvents() {
+      alert('Upcoming Events Section Coming Soon!');
+    }
+
+    function register() {
+      const id = document.getElementById('id').value;
+      const name = document.getElementById('name').value;
+      const event = document.getElementById('event').value;
+
+      if (id && name && event) {
+        alert(`Registration Successful!\n\nID: ${id}\nName: ${name}\nEvent: ${event}`);
+        location.reload(); // Reset after registration
+      } else {
+        alert('Please fill out all fields.');
+      }
+    }
+  </script>
+</body>
+</html>

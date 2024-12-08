@@ -1,0 +1,115 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem; /* Doubled padding to increase navbar height */
+  background-color: #333;
+  color: #fff;
+  position: relative;
+}
+
+/* Logo */
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fe0303;
+}
+
+/* Centering the nav links */
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.navbar .nav-links li {
+  margin: 0 1rem;
+}
+
+/* Dull look with a bright hover effect */
+.navbar .nav-links a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5); /* Dull look */
+  font-size: 2rem; /* Doubled font size */
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navbar .nav-links a:hover {
+  color: #fff; /* Brighten on hover */
+}
+
+/* Hover underline effect */
+.navbar .nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #ff6347;
+  left: 50%;
+  bottom: -4px;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar .nav-links a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Mobile menu icon */
+.navbar .menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    position: absolute;
+    top: 100px; /* Adjusted for taller navbar */
+    right: 0;
+    width: 100%;
+    background-color: #333;
+    flex-direction: column;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(-20px);
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .navbar .nav-links li {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .navbar .menu-icon {
+    display: block;
+  }
+}
+
+/* Keyframes for fading animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
